@@ -24,7 +24,7 @@ def get_filters():
             if city == 'chicago' or city == 'washington' or city == 'new york city':
                 break
             else:
-                print("Invalid input, try again.")
+                print("Invalid input, try again. Make sure to choose a valid city.")
         except:
             print("Invalid input, try again.")
     print("Great, we'll check {}!".format(city.title()))   
@@ -37,7 +37,7 @@ def get_filters():
             # get user input for month (all, january, february, ... , june)
             while True:
                 try:
-                    month = input("Please tell me what month (January through June) you want to see data for. If you want the whole year, write all: ").lower()
+                    month = input("Please tell me what month (January through June) you want to see data for. If you want the whole year, write 'all': ").lower()
                     valid_months = ['january', 'february', 'march', 'april', 'may', 'june']
                     day =  "all"
                     if month in valid_months:
@@ -45,7 +45,7 @@ def get_filters():
                     elif month == 'all':
                         break
                     else:
-                        print("Invalid input, try again.")
+                        print("Invalid input, try again. Make sure to choose a valid month.")
                 except:
                     print("Invalid input, try again.")
             print("Great, we'll check {}!".format(month.title()))
@@ -54,7 +54,7 @@ def get_filters():
             # get user input for day of week (all, monday, tuesday, ... sunday)
             while True:
                 try:
-                    day = input("Please tell me what day of the week you want to see data for. If you want the whole week, write all: ").lower()
+                    day = input("Please tell me what day of the week you want to see data for. If you want the whole week, write 'all': ").lower()
                     valid_days = list(calendar.day_name)
                     month = "all"
                     if day.title() in valid_days:
@@ -62,7 +62,7 @@ def get_filters():
                     elif day == 'all':
                         break
                     else:
-                        print("Invalid input, try again.")
+                        print("Invalid input, try again. Make sure to choose a valid day.")
                 except:
                     print("Invalid input, try again.")
             print("Great, we'll check {}!".format(day.title()))
@@ -73,7 +73,7 @@ def get_filters():
             day =  "all"
             break
         else:
-            print("input not valid. Try again")
+            print("Invalid input, try again.")
 
     print('-'*40)
     return city, month, day
@@ -231,7 +231,7 @@ def main():
         start = 0
         end = 5
         first_five_rows = input('\nWould you like to see 5 rows of data? Enter yes or no.\n')
-        if first_five_rows.lower() == 'yes':
+        if first_five_rows.lower() == 'yes' or first_five_rows.lower() == 'y':
             while True:
                 try:
                     print(df[start:end])
@@ -247,7 +247,7 @@ def main():
                     break
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
-        if restart.lower() != 'yes':
+        if restart.lower() != 'yes' or restart.lower() != 'y':
             break
 
 
