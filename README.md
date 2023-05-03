@@ -15,6 +15,12 @@ chicago.csv
 washington.csv
 new_york_city.csv
 
+### Packages used
+time
+pandas as pd
+numpy as np
+calendar
+
 ### Credits
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.MultiIndex.from_arrays.html#pandas.MultiIndex.from_arrays
 https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.day_name.html#pandas.Series.dt.day_name
