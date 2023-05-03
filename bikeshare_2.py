@@ -231,7 +231,7 @@ def main():
         start = 0
         end = 5
         first_five_rows = input('\nWould you like to see 5 rows of data? Enter yes or no.\n')
-        if first_five_rows.lower() == 'yes':
+        if first_five_rows.lower() == 'yes' or first_five_rows.lower() == 'y':
             while True:
                 try:
                     print(df[start:end])
